@@ -1,0 +1,19 @@
+/* Hide the MkDocs "Welcome to MkDocs" text */
+.md-header-nav {
+    display: none;
+}
+
+/* Optional: Hide any other unwanted header elements */
+.md-logo {
+    display: none !important;
+}
+
+.md-typeset__scrollwrap {
+    overflow-x: auto;
+}
+
+@media (min-width: 1440px) and (min-height: 960px) {
+  .md-nav__title {
+    display: none;
+  }
+}
