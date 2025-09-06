@@ -1,0 +1,8 @@
+# MkDocs build directory
+site/
+
+docs/books/
+docs/box-writeup/
+docs/css/
+docs/history/
+docs/languages/
