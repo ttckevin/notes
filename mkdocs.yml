@@ -1,0 +1,232 @@
+site_name: "HackingT1me"
+site_description: "A second brain for CTFs, book reviews, tech notes, and more."
+site_url: "https://ttckevin.github.io"
+repo_url: "https://github.com/ttckevin/notes"
+
+nav:
+  - Cheatsheet:
+    - Enumeration:
+        - Windows: pentest/cheatsheet/enumeration/windows.md
+        - Linux: pentest/cheatsheet/enumeration/linux.md
+    - Privesc:
+      - Windows:
+        - Checklist: pentest/cheatsheet/privesc/windows/checklist.md
+        - Registry:
+            AlwaysInstallElevated: pentest/cheatsheet/privesc/windows/registry/alwaysinstallelevated.md
+            AutoRun: pentest/cheatsheet/privesc/windows/registry/autorun.md
+            StoredCredentials: pentest/cheatsheet/privesc/windows/registry/storedcred.md
+        - DLL Hijack: pentest/cheatsheet/privesc/windows/dllhijack.md
+        - Group Policy Preferences (GPP): pentest/cheatsheet/privesc/windows/gpp.md
+        - Token Privileges: 
+            - seimpersonate: pentest/cheatsheet/privesc/windows/token/seimpersonate.md
+            - sebackup: pentest/cheatsheet/privesc/windows/token/sebackup.md
+            - sedebug: pentest/cheatsheet/privesc/windows/token/sedebug.md
+            - semanagevolume: pentest/cheatsheet/privesc/windows/token/semanagevolume.md
+            - serestore: pentest/cheatsheet/privesc/windows/token/serestore.md
+        - Unquoted Service Paths: pentest/cheatsheet/privesc/windows/unquotedservicepaths.md
+        - UAC bypass: pentest/cheatsheet/privesc/windows/uacbypass.md
+        - Scheduled Tasks: pentest/cheatsheet/privesc/windows/scheduledtasks.md
+        - Kernel Exploits: pentest/cheatsheet/privesc/windows/kernel/exp.md
+      - Linux: 
+          - pentest/cheatsheet/privesc/linux/checklist.md
+    - Post Exploitation:
+        - Windows: 
+            - Credential Dump: pentest/cheatsheet/postex/windows/creddump.md
+            - Golden Tickets: pentest/cheatsheet/postex/windows/goldtix.md
+            - Shadow Copy: pentest/cheatsheet/postex/windows/shadowcopy.md
+        - Linux: pentest/cheatsheet/postex/lpex.md
+    - AV/EDR Bypass: pentest/cheatsheet/postex/bypass_av.md
+    - Pivoting:
+        - Ligolo: pentest/cheatsheet/pivot/ligolo.md
+        - Chisel: pentest/cheatsheet/pivot/chisel.md
+        - SSH: pentest/cheatsheet/pivot/ssh.md
+    - Reverse Shells: 
+      - pentest/cheatsheet/rev_shells/common.md
+      - pentest/cheatsheet/rev_shells/uncommon.md
+  - Initial Phase:
+      - Macro-based Attack: 
+          - .doc: pentest/initial/macro/doc.md
+          - .odt: pentest/initial/macro/odt.md
+      - LNK File Attack: 
+          - LNK: pentest/initial/lnk/lnk.md
+          - How to ?:
+              - PowerShell: pentest/initial/lnk/ps.md
+              - Netexec: pentest/initial/lnk/nxc.md
+              - Config-Library: pentest/initial/lnk/cl-ms.md
+              - Phishing: pentest/initial/lnk/phishing.md
+      - URL File Attack:
+          - URL: pentest/initial/url/url.md
+          - How to ?: pentest/initial/url/attack.md
+      - Link-Local Multi Name Resolution Poisoning: pentest/initial/llmnr.md
+      - IPv6 DNS Takeover Attack: pentest/initial/ipv6.md
+      - Passback Attack: pentest/initial/passback.md
+      - SMB relay Attack: pentest/initial/smbrelay.md
+  - Enumeration: 
+    - pentest/enumeration/nmap.md
+    - Ports:
+      - pentest/enumeration/ports/21.md
+      - pentest/enumeration/ports/22.md
+      - pentest/enumeration/ports/25.md
+      - pentest/enumeration/ports/69.md
+      - pentest/enumeration/ports/79.md
+      - pentest/enumeration/ports/80,443.md
+      - pentest/enumeration/ports/110,995.md
+      - pentest/enumeration/ports/111,2049.md
+      - pentest/enumeration/ports/135.md
+      - pentest/enumeration/ports/139,445.md
+      - pentest/enumeration/ports/143,993.md
+      - pentest/enumeration/ports/161.md
+      - pentest/enumeration/ports/389,636,3268,3269.md
+      - pentest/enumeration/ports/873.md
+      - pentest/enumeration/ports/3389.md
+    - Windows:
+      - Checklist: pentest/enumeration/windows/checklist.md
+      - Privileges: pentest/enumeration/windows/priv.md
+      - Users: pentest/enumeration/windows/users.md
+      - Groups: 
+          - Commands: pentest/enumeration/windows/groups/groups.md
+          - LAPS: pentest/enumeration/windows/groups/laps.md
+          - WSUS: pentest/enumeration/windows/groups/wsus.md
+          - Server Operator: pentest/enumeration/windows/groups/srvops.md
+          - Event Log Readers: pentest/enumeration/windows/groups/elr.md
+      - Files: pentest/enumeration/windows/filedir.md
+      - Directories:
+        - Recycle Bin: pentest/enumeration/windows/recyclebin.md 
+      - Group Policy Object: pentest/enumeration/windows/gpo.md
+      - Network: pentest/enumeration/windows/network.md
+      - System: pentest/enumeration/windows/system.md
+    - Linux:
+      - Checklist: pentest/enumeration/linux/checklist.md
+      - Privileges: pentest/enumeration/linux/priv.md
+      - Users: pentest/enumeration/linux/users.md
+      - Groups: pentest/enumeration/linux/groups.md
+      - Files: pentest/enumeration/linux/filedir.md
+      - Network: pentest/enumeration/linux/network.md
+      - System: pentest/enumeration/linux/system.md
+    - Wapp:
+      - pentest/enumeration/wapp/fuzzing.md
+      - pentest/enumeration/wapp/subdomain.md
+      - Virtual Host: pentest/enumeration/wapp/virtual_host.md
+      - CMS: pentest/enumeration/wapp/cms.md
+      - CI/CD: pentest/enumeration/wapp/cicd.md
+    - Database:
+      - pentest/enumeration/databases/mariadb.md
+      - pentest/enumeration/databases/mongodb.md
+      - pentest/enumeration/databases/mssql.md
+      - pentest/enumeration/databases/mysql.md
+      - pentest/enumeration/databases/postgresql.md
+      - Redis: 
+          - pentest/enumeration/databases/redis/redis.md
+          - Sandbox Escape: pentest/enumeration/databases/redis/sandboxesc.md
+  - Privesc:
+    - Windows:
+      - Checklist: pentest/privesc/windows/checklist.md
+      - Attack: 
+          - GPOabuse: pentest/privesc/windows/attack/gpo.md
+          - Utilman.exe: pentest/privesc/windows/attack/utilman.md
+          - Silver Ticket: pentest/privesc/windows/attack/silverticket.md
+      - Registry:
+          - AlwaysInstallElevated: pentest/privesc/windows/registry/alwaysinstallelevated.md
+          - AutoRun: pentest/privesc/windows/registry/autorun.md
+          - StoredCredentials: pentest/privesc/windows/registry/storedcred.md
+      - DLL Hijack: pentest/privesc/windows/dllhijack.md
+      - Group Policy Preferences (GPP): pentest/privesc/windows/gpp.md
+      - Token Privileges: 
+        - Introduction: pentest/privesc/windows/tokenprivileges/intro.md
+        - seimpersonate: 
+              - Potatoes:
+                  - HotPotato: pentest/privesc/windows/tokenprivileges/potatoes/hot.md
+                  - SharpEfsPotato: pentest/privesc/windows/tokenprivileges/potatoes/sharp.md
+                  - RottenPotato: pentest/privesc/windows/tokenprivileges/potatoes/rotten.md
+                  - JuicyPotato: pentest/privesc/windows/tokenprivileges/potatoes/juicy.md
+                  - RoguePotato: pentest/privesc/windows/tokenprivileges/potatoes/rogue.md
+                  - LocalPotato: pentest/privesc/windows/tokenprivileges/potatoes/local.md
+                  - RogueWinRM: pentest/privesc/windows/tokenprivileges/potatoes/roguewinrm.md
+                  - PrintSpoofer: pentest/privesc/windows/tokenprivileges/potatoes/printspoofer.md
+        - semanagevolume: pentest/privesc/windows/tokenprivileges/semanagevolume.md
+        - serestore: pentest/privesc/windows/tokenprivileges/serestore.md
+      - Unquoted Service Paths: pentest/privesc/windows/unquotedservicepaths.md
+      - UAC bypass: pentest/privesc/windows/uacbypass.md
+      - Scheduled Tasks: pentest/privesc/windows/scheduledtasks.md
+      - Kernel Exploits: 
+          - What is a Kernel?: pentest/privesc/windows/kernel/kernel.md
+          - Types of Kernel: pentest/privesc/windows/kernel/types.md
+          - Exploitation: pentest/privesc/windows/kernel/exp.md
+      - Automated Tools: pentest/privesc/windows/automated_tools.md
+    - Linux:
+      - Kernel Exploits: pentest/privesc/linux/kernelexploit.md
+      - sudo: 
+          - pentest/privesc/linux/sudo/sudo.md
+          - LD_PRELOAD: pentest/privesc/linux/sudo/ldpreload.md
+          - LD_LIBRARY_PATH: pentest/privesc/linux/sudo/ldlibrary.md
+          - CVE-2019-14287: pentest/privesc/linux/sudo/CVE-2019-14287.md
+          - Tools : pentest/privesc/linux/sudo/tools.md
+      - suid: pentest/privesc/linux/suid.md
+      - nfs: pentest/privesc/linux/nfs.md
+      - writable files: 
+          - /etc/passwd: pentest/privesc/linux/writableFiles/passwd.md
+          - /etc/sudoers: pentest/privesc/linux/writableFiles/sudoers.md
+          - /etc/shadow: pentest/privesc/linux/writableFiles/shadow.md
+          - authorized_keys: pentest/privesc/linux/writableFiles/authorized_keys.md
+  - Coding:
+    - Common Pitfalls: 
+        - php: pentest/coding/php/pitfalls.md
+        - bash: pentest/coding/bash/pitfalls.md
+  - Tools:
+    - Ligolo: pentest/tools/ligolo.md
+    - Penelope: pentest/tools/penelope.md
+    - Evil-WinRM: pentest/tools/evilwinrm.md
+    - NetExec: pentest/tools/netexec.md
+    - smbmap: pentest/tools/smbmap.md
+
+theme:
+  name: material
+  homepage: "index.md"
+  language: en
+  icon:
+    repo: fontawesome/brands/github
+    previous: fontawesome/solid/angle-left
+    next: fontawesome/solid/angle-right
+  favicon: images/favicon.png
+  font:
+    text: Roboto Mono
+    code: Fira Code
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: white
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: grey
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+  features:
+    - navigation.instant
+    - content.tabs.link
+    - toc.integrate
+
+markdown_extensions:
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+extra_css:
+  - css/styles.css
+plugins:
+  - search:
+      lang: en
+  - tags:
+      tags_slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
